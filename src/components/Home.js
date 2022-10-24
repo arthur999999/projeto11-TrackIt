@@ -1,13 +1,47 @@
 import styled from "styled-components"
-import {Link} from "react-router-dom";
+import {Link,  useNavigate} from "react-router-dom";
+import { useContext, useState} from "react";
+import axios from "axios";
+import MyContext from "../context/MyContext";
+
+
 
 export default function Home () {
+    const {setFoto, setToken} = useContext(MyContext)
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const navigation = useNavigate();
+    function tesste(){
+       
+            const requisicao = axios.post("https://mock-api.bootcamp.respondeai.com.br/api/v2/trackit/auth/login", {
+                email: email,
+                password: password
+            });
+    
+            requisicao.then(resposta => {
+               console.log(resposta);
+               setFoto(resposta.data.image)
+               setToken(resposta.data.token)
+                navigation('/habitos')
+                
+            });
+    
+            requisicao.catch(erro => {
+                console.log(erro.response.data);
+                alert('deu errado')
+            });
+        
+            
+          
+          
+    }
+
     return(
         <Gerall>
             <div><img src="./assets/images/Group8.png" alt="sddf" /></div>
-            <input type='text' placeholder="email" />
-            <input type='text' placeholder="senha" />
-            <button>Entrar</button>
+            <input type='text' value={email} onChange={e => setEmail(e.target.value)} placeholder="email" />
+            <input type='text' value={password} onChange={e => setPassword(e.target.value)} placeholder="senha" />
+            <button onClick={()=> tesste()}>Entrar</button>
             <Link to="/cadastro">
 
                 <p>Não tem uma conta? Cadastre-se!</p>

@@ -1,20 +1,30 @@
 import Home from "./Home";
-import {BrowserRouter, Routes, Route} from "react-router-dom";
+import {BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
 import styled from "styled-components";
 import Register from "./Register";
+import { useState } from "react";
+import Dashboard from "./Dashboard";
+import MyContext from "../context/MyContext";
+import Menu from "./Menu";
+import Today from "./Today";
 
 
 export default function App() {
+    const [foto, setFoto] = useState('')
+    const [token, setToken] = useState('')
     return(
         <Centralized>
 
             <BrowserRouter>
-                <Routes>
-                    
-                    <Route path="/" element={<Home/>} />
-                    <Route path="/cadastro" element={<Register/>} />
-                </Routes>
-                
+                <MyContext.Provider value={{foto, setFoto, token, setToken}}>
+                    <Routes>
+                   
+                        <Route path="/" element={<Home />} /> 
+                        <Route path="/cadastro" element={<Register/>} />
+                        <Route path="/habitos" element={<><Dashboard /><Menu /></>} />
+                        <Route path="/hoje" element={<Today/>} />
+                    </Routes>
+                </MyContext.Provider>
             </BrowserRouter>
         </Centralized>
         
