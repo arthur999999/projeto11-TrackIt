@@ -3,6 +3,8 @@ import { useEffect, useContext, useState } from "react";
 import MyContext from "../context/MyContext";
 import axios from "axios";
 import styled from "styled-components";
+import dayjs from "dayjs";
+
 
 export default function Today () {
 
@@ -85,14 +87,44 @@ export default function Today () {
             })
         }
     }
+    
+    function dia () {
+        switch (dayjs().day()) {
+            case 0:
+                return('Domingo')
 
-
+                break;
+            case 1:
+                return('Segunda')
+                break;
+            case 2:
+                return('Terça')
+                break;
+            case 3:
+                return('Quarta')
+                break;
+            case 4:
+                return('Quinta')
+                break;
+        
+            case 5:
+                return('Sexta')
+                break;
+            case 6:
+                return('Sábado')
+                break;
+        
+            default:
+                break;
+        }
+    }
 
     return(
         <Globall>
         
             <HeaderMenu/>
-                <div>{feito}% dos hábitos concluídos</div>
+                
+                <Cabe><h1>{dia()}, {dayjs().date()}/{dayjs().month()}</h1><p>{feito}% dos hábitos concluídos</p></Cabe>
             <Habit>
                 {todayHabits.map((m, key)=><div key={key} className="card">
                     <div>
@@ -107,6 +139,32 @@ export default function Today () {
         </Globall>
     )
 }
+
+const Cabe = styled.div`
+    width: 340px;
+    
+    margin-top: 28px;
+    margin-bottom: 28px;
+
+    h1 {
+        font-family: 'Lexend Deca';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22.976px;
+        line-height: 29px;
+        color: #126BA5;
+    }
+
+    p {
+        font-family: 'Lexend Deca';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 17.976px;
+        line-height: 22px;
+
+        color: #8FC549;
+    }
+`
 
 const Globall = styled.div`
     width: 100vw;
