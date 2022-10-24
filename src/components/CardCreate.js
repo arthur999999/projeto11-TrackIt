@@ -54,8 +54,8 @@ export default function CardCreate ({hidden, setHidden, setRender}) {
 
     return(
         <Globall className={hidden}>
-            <input type="text" value={habitName} onChange={e => setHabitName(e.target.value)} placeholder="nome do hábito" />
-            <div className="buttons">
+            <input type="text" data-identifier="input-habit-name" value={habitName} onChange={e => setHabitName(e.target.value)} placeholder="nome do hábito" />
+            <div data-identifier="week-day-btn" className="buttons">
                 <button onClick={()=> selectDay(0)} className={listDays.includes(0)? 'grey' : ''}>D</button>
                 <button onClick={()=> selectDay(1)} className={listDays.includes(1)? 'grey' : ''}>S</button>
                 <button onClick={()=> selectDay(2)} className={listDays.includes(2)? 'grey' : ''}>T</button>
@@ -67,7 +67,7 @@ export default function CardCreate ({hidden, setHidden, setRender}) {
             
             </div>
             <div className="others">
-                <button onClick={()=> cancel()}>Cancelar</button><button onClick={()=> sendHabit()}>Salvar</button>
+                <button data-identifier="cancel-habit-create-btn" onClick={()=> cancel()}>Cancelar</button><button data-identifier="save-habit-create-btn" onClick={()=> sendHabit()}>Salvar</button>
             </div>
         </Globall>
     )

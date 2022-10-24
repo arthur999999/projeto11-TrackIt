@@ -12,7 +12,7 @@ export default function Menu () {
         <Geralll>
             <Link to='/habitos'>
 
-                <p id='pp'>Hábitos</p>
+                <p data-identifier="habit-page-action" id='pp'>Hábitos</p>
             </Link>
             <Link to='/hoje'>
                 <div style={{width: 91, height: 91}}>
@@ -45,7 +45,7 @@ export default function Menu () {
                 </div>
             </Link>
             <Link to="/historico">
-                <p>Histórico</p>
+                <p data-identifier="historic-page-action">Histórico</p>
             
             </Link>
         </Geralll>

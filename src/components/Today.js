@@ -124,16 +124,16 @@ export default function Today () {
         
             <HeaderMenu/>
                 
-                <Cabe><h1>{dia()}, {dayjs().date()}/{dayjs().month()}</h1><p>{feito}% dos hábitos concluídos</p></Cabe>
+                <Cabe><h1>{dia()}, {dayjs().date()}/{dayjs().month()}</h1><p>{listConclued.length !== 0 ? feito+"%" : 'Nenhum'} dos hábitos concluídos</p></Cabe>
             <Habit>
                 {todayHabits.map((m, key)=><div key={key} className="card">
-                    <div>
+                    <div data-identifier="today-infos">
                         <h1>{m.name}</h1>
                         <p>Sequência atual: {m.currentSequence} dias</p>
                         <p>Seu recorde: {m.highestSequence
 } dias</p>
                     </div>
-                    <div onClick={()=> conclued(m.id , m.done)} className={m.done == true ? 'green' : ''}><ion-icon name="checkmark-sharp"></ion-icon></div>
+                    <div data-identifier="done-habit-btn" onClick={()=> conclued(m.id , m.done)} className={m.done == true ? 'green' : ''}><ion-icon name="checkmark-sharp"></ion-icon></div>
                 </div>)}
             </Habit>
         </Globall>

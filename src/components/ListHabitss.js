@@ -62,8 +62,8 @@ export default function ListHabitss ({render, setRender}) {
         <Gerall>
             {listHabits.map((m, key)=><div key={key} className="habit"><header>
                 
-                    <p>{m.name}</p>
-                    <span onClick={()=> selectDelet(m.id)}><ion-icon name="trash-outline"></ion-icon></span>
+                    <p data-identifier="habit-name">{m.name}</p>
+                    <span data-identifier="delete-habit-btn" onClick={()=> selectDelet(m.id)}><ion-icon name="trash-outline"></ion-icon></span>
 
                 </header>
                     <div>

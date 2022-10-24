@@ -3,7 +3,7 @@ import styled from "styled-components"
 export default function CriarHabito ({setHidden}) {
     return(
         <Criar>
-            <span>Meus hábitos</span><button onClick={()=> setHidden('')}><div>+</div></button>
+            <span>Meus hábitos</span><button data-identifier="create-habit-btn" onClick={()=> setHidden('')}><div>+</div></button>
         </Criar>
     )
 }

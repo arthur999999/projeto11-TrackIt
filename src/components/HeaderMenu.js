@@ -8,7 +8,7 @@ export default function HeaderMenu () {
 
     return(
         <Gerall>
-                <header><div><span>TrackIt</span><img src={foto} alt="" /></div></header>
+                <header><div><span>TrackIt</span><img data-identifier="avatar" src={foto} alt="" /></div></header>
         </Gerall>
     )
 }

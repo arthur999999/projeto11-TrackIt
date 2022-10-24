@@ -39,10 +39,10 @@ export default function Home () {
     return(
         <Gerall>
             <div><img src="./assets/images/Group8.png" alt="sddf" /></div>
-            <input type='text' value={email} onChange={e => setEmail(e.target.value)} placeholder="email" />
-            <input type='text' value={password} onChange={e => setPassword(e.target.value)} placeholder="senha" />
-            <button onClick={()=> tesste()}>Entrar</button>
-            <Link to="/cadastro">
+            <input type='text' data-identifier="input-email" value={email} onChange={e => setEmail(e.target.value)} placeholder="email" />
+            <input type='text' data-identifier="input-password" value={password} onChange={e => setPassword(e.target.value)} placeholder="senha" />
+            <button data-identifier="login-btn" onClick={()=> tesste()}>Entrar</button>
+            <Link data-identifier="sign-up-action" to="/cadastro">
 
                 <p>Não tem uma conta? Cadastre-se!</p>
             </Link>

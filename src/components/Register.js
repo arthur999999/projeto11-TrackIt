@@ -36,12 +36,12 @@ export default function Register () {
     return(
         <Gerall>
             <div><img src="./assets/images/Group8.png" alt="sddf" /></div>
-            <input type='text' value={email} onChange={e => setEmail(e.target.value)} placeholder="email" />
-            <input type='text' value={password} onChange={e => setPassword(e.target.value)} placeholder="senha" />
-            <input type='text' value={nome} onChange={e => setNome(e.target.value)} placeholder="nome" />
-            <input type='text' value={foto} onChange={e => setFoto(e.target.value)} placeholder="foto" />
+            <input type='text' data-identifier="input-email" value={email} onChange={e => setEmail(e.target.value)} placeholder="email" />
+            <input type='text' data-identifier="input-password" value={password} onChange={e => setPassword(e.target.value)} placeholder="senha" />
+            <input type='text' data-identifier="input-name" value={nome} onChange={e => setNome(e.target.value)} placeholder="nome" />
+            <input type='text' data-identifier="input-photo" value={foto} onChange={e => setFoto(e.target.value)} placeholder="foto" />
             <button onClick={()=> sendRegister()}>Cadastrar</button>
-            <Link to="/">
+            <Link data-identifier="back-to-login-action" to="/">
                 <p>Já tem uma conta? Faça login!</p>
 
             </Link>
