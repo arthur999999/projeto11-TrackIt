@@ -22,7 +22,7 @@ export default function Home () {
                console.log(resposta);
                setFoto(resposta.data.image)
                setToken(resposta.data.token)
-                navigation('/habitos')
+                navigation('/hoje')
                 
             });
     

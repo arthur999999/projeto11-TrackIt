@@ -67,13 +67,13 @@ export default function ListHabitss ({render, setRender}) {
 
                 </header>
                     <div>
-                        <div className={(m.days).includes(1)? 'grey' : ''}>D</div>
-                        <div className={(m.days).includes(2)? 'grey' : ''}>S</div>
-                        <div className={(m.days).includes(3)? 'grey' : ''}>T</div>
+                        <div className={(m.days).includes(0)? 'grey' : ''}>D</div>
+                        <div className={(m.days).includes(1)? 'grey' : ''}>S</div>
+                        <div className={(m.days).includes(2)? 'grey' : ''}>T</div>
+                        <div className={(m.days).includes(3)? 'grey' : ''}>Q</div>
                         <div className={(m.days).includes(4)? 'grey' : ''}>Q</div>
-                        <div className={(m.days).includes(5)? 'grey' : ''}>Q</div>
+                        <div className={(m.days).includes(5)? 'grey' : ''}>S</div>
                         <div className={(m.days).includes(6)? 'grey' : ''}>S</div>
-                        <div className={(m.days).includes(7)? 'grey' : ''}>S</div>
                     </div>
                 </div>)}
             <Delet className={hiddenn}>

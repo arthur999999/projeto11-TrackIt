@@ -12,17 +12,18 @@ import Today from "./Today";
 export default function App() {
     const [foto, setFoto] = useState('')
     const [token, setToken] = useState('')
+    const [feito, setFeito] = useState(0)
     return(
         <Centralized>
 
             <BrowserRouter>
-                <MyContext.Provider value={{foto, setFoto, token, setToken}}>
+                <MyContext.Provider value={{foto, setFoto, token, setToken, feito, setFeito}}>
                     <Routes>
                    
                         <Route path="/" element={<Home />} /> 
                         <Route path="/cadastro" element={<Register/>} />
                         <Route path="/habitos" element={<><Dashboard /><Menu /></>} />
-                        <Route path="/hoje" element={<Today/>} />
+                        <Route path="/hoje" element={<><Today /><Menu /></>} />
                     </Routes>
                 </MyContext.Provider>
             </BrowserRouter>

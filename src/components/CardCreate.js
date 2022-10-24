@@ -56,13 +56,13 @@ export default function CardCreate ({hidden, setHidden, setRender}) {
         <Globall className={hidden}>
             <input type="text" value={habitName} onChange={e => setHabitName(e.target.value)} placeholder="nome do hábito" />
             <div className="buttons">
-                <button onClick={()=> selectDay(1)} className={listDays.includes(1)? 'grey' : ''}>D</button>
-                <button onClick={()=> selectDay(2)} className={listDays.includes(2)? 'grey' : ''}>S</button>
-                <button onClick={()=> selectDay(3)} className={listDays.includes(3)? 'grey' : ''}>T</button>
-                <button onClick={()=> selectDay(4)} className={listDays.includes(4)? 'grey' : ''}>Q</button>
-                <button onClick={()=> selectDay(5)} className={listDays.includes(5)? 'grey' : ''}>Q</button>
-                <button onClick={()=> selectDay(6)} className={listDays.includes(6)? 'grey' : ''}>S</button>  
-                <button onClick={()=> selectDay(7)} className={listDays.includes(7)? 'grey' : ''}>S</button>
+                <button onClick={()=> selectDay(0)} className={listDays.includes(1)? 'grey' : ''}>D</button>
+                <button onClick={()=> selectDay(1)} className={listDays.includes(2)? 'grey' : ''}>S</button>
+                <button onClick={()=> selectDay(2)} className={listDays.includes(3)? 'grey' : ''}>T</button>
+                <button onClick={()=> selectDay(3)} className={listDays.includes(4)? 'grey' : ''}>Q</button>
+                <button onClick={()=> selectDay(4)} className={listDays.includes(5)? 'grey' : ''}>Q</button>
+                <button onClick={()=> selectDay(5)} className={listDays.includes(6)? 'grey' : ''}>S</button>  
+                <button onClick={()=> selectDay(6)} className={listDays.includes(7)? 'grey' : ''}>S</button>
             
             
             </div>
