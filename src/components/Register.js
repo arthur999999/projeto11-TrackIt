@@ -41,8 +41,8 @@ export default function Register () {
             <input type='text' data-identifier="input-name" value={nome} onChange={e => setNome(e.target.value)} placeholder="nome" />
             <input type='text' data-identifier="input-photo" value={foto} onChange={e => setFoto(e.target.value)} placeholder="foto" />
             <button onClick={()=> sendRegister()}>Cadastrar</button>
-            <Link data-identifier="back-to-login-action" to="/">
-                <p>Já tem uma conta? Faça login!</p>
+            <Link  to="/">
+                <p data-identifier="back-to-login-action">Já tem uma conta? Faça login!</p>
 
             </Link>
 

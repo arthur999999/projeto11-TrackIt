@@ -42,9 +42,9 @@ export default function Home () {
             <input type='text' data-identifier="input-email" value={email} onChange={e => setEmail(e.target.value)} placeholder="email" />
             <input type='text' data-identifier="input-password" value={password} onChange={e => setPassword(e.target.value)} placeholder="senha" />
             <button data-identifier="login-btn" onClick={()=> tesste()}>Entrar</button>
-            <Link data-identifier="sign-up-action" to="/cadastro">
+            <Link  to="/cadastro">
 
-                <p>Não tem uma conta? Cadastre-se!</p>
+                <p data-identifier="sign-up-action">Não tem uma conta? Cadastre-se!</p>
             </Link>
 
         </Gerall>
