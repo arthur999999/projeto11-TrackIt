@@ -182,7 +182,7 @@ const Habit = styled.div`
 
     .card {
         width: 340px;
-        height: 94px;
+        min-height: 94px;
         background-color: red;
         margin-bottom: 10px;
         padding-left: 15px;
@@ -192,6 +192,7 @@ const Habit = styled.div`
         justify-content: space-between;
         background: #FFFFFF;
         border-radius: 5px;
+        padding-bottom: 7px;
     }
 
     .card h1 {
