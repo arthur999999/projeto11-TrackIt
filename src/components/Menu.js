@@ -44,7 +44,10 @@ export default function Menu () {
 
                 </div>
             </Link>
-            <p>Histórico</p>
+            <Link to="/historico">
+                <p>Histórico</p>
+            
+            </Link>
         </Geralll>
     )
 }

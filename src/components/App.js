@@ -7,6 +7,7 @@ import Dashboard from "./Dashboard";
 import MyContext from "../context/MyContext";
 import Menu from "./Menu";
 import Today from "./Today";
+import History from "./History";
 
 
 export default function App() {
@@ -24,6 +25,7 @@ export default function App() {
                         <Route path="/cadastro" element={<Register/>} />
                         <Route path="/habitos" element={<><Dashboard /><Menu /></>} />
                         <Route path="/hoje" element={<><Today /><Menu /></>} />
+                        <Route path="/historico" element={<><History/><Menu/></>} />
                     </Routes>
                 </MyContext.Provider>
             </BrowserRouter>
